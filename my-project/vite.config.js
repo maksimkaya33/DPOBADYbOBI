@@ -1,9 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { ghPages } from "vite-plugin-gh-pages";
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: "/DPOBADYbOBI/",
-  plugins: [react(), ghPages()],
+  base: "/DPOBADYbOBI/", // Вкажи назву свого репозиторію
+  plugins: [react()],
 });
