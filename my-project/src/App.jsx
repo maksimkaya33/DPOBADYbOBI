@@ -10,7 +10,7 @@ import Gallery from "./components/Gallery";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/DPOBADYbOBI">
       <GlobalStyles />
       <Header />
       <Routes>
