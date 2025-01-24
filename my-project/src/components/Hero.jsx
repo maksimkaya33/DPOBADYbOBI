@@ -12,6 +12,10 @@ const HeroSection = styled.section`
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Паралакс-ефект */
+
+  @media (max-width: 768px) {
+    background-attachment: scroll; /* Вимкнення паралакс-ефекту на мобільних пристроях */
+  }
 `;
 
 const Overlay = styled.div`
@@ -29,6 +33,7 @@ const HeroContent = styled.div`
   text-shadow: 2px 2px 4px rgba(205, 148, 5, 0.595);
   text-align: center;
   z-index: 1;
+  max-width: 80%;
 
   h1 {
     font-size: 3rem;
@@ -52,7 +57,7 @@ const HeroContent = styled.div`
 
     h1,
     h2 {
-      font-size: 3rem;
+      font-size: 2.5rem; /* Зменшення розміру тексту на мобільних пристроях */
     }
 
     h1 {
@@ -85,16 +90,11 @@ const HeroContent = styled.div`
       margin-bottom: -1rem;
     }
   }
-  @media (min-width: 768px) {
-    h4 {
-      font-size: 2rem;
-      color: #c0b3a0;
-    }
-  }
+
   @media (max-width: 375px) {
     h1,
     h2 {
-      font-size: 2rem;
+      font-size: 2rem; /* Додаткове зменшення розміру тексту для дуже малих екранів */
     }
     h2 {
       transform: translate(0px, 0px);
@@ -122,11 +122,11 @@ const PhoneLink = styled.a`
   }
 
   @media (max-width: 426px) {
-    font-size: 2.3rem;
+    font-size: 1.9rem;
   }
 
   @media (max-width: 375px) {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 `;
 
